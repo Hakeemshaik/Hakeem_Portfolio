@@ -8,6 +8,16 @@ body {
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: white;
 }
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #38bdf8;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
 
 /* Hero Section */
 .hero {

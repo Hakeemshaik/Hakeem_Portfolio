@@ -13,47 +13,34 @@ body {
 
 /* Hero Section */
 .hero {
-  display: flex;           /* use flex layout */
-  flex-direction: column;  /* stack logo, title, description vertically */
-  align-items: center;     /* center horizontally */
-  justify-content: center; /* optional: center vertically if needed */
-  text-align: center;      /* center text inside */
+  display: flex;
+  justify-content: center;  /* centers the content horizontally */
+  text-align: center;       /* centers text inside */
   padding: 80px 20px;
+  background: radial-gradient(circle at top, #1e293b, #020617);
   animation: fadeDown 1.5s ease;
-  gap: 20px;               /* space between logo, h1, and paragraph */
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-content {
+  display: flex;
+  flex-direction: column;   /* stack logo, title, paragraph vertically */
+  align-items: center;      /* center all content horizontally */
+  gap: 20px;                /* spacing between logo, title, and text */
 }
 
-.hero p {
-  max-width: 800px; /* limits paragraph width for readability */
-  line-height: 1.6;
-  font-size: 1.2rem;
-  opacity: 0.85;
-}
-
-
-/* Logo hover */
 .logo-svg {
-  width: 400px;
+  width: 250px;             /* adjust size if too big */
   height: auto;
+  display: block;            /* ensures image centers in flex */
+  margin: 0 auto;            /* extra safeguard */
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.logo-svg:hover .icon-circle {
-  filter: drop-shadow(0 0 20px #38bdf8);
+.logo-svg:hover {
+  transform: scale(1.05);
 }
 
-.logo-svg:hover {
-  transform: scale(1.1);
-}
 
 .logo-svg:hover .arrow {
   fill: #ffffffcc;

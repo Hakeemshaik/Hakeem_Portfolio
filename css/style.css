@@ -9,13 +9,11 @@ body {
   color: white;
 }
 
-}
-
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: center;  /* centers the content horizontally */
-  text-align: center;       /* centers text inside */
+  justify-content: center;  /* center content horizontally */
+  text-align: center;       /* center text */
   padding: 80px 20px;
   background: radial-gradient(circle at top, #1e293b, #020617);
   animation: fadeDown 1.5s ease;
@@ -24,15 +22,15 @@ body {
 .hero-content {
   display: flex;
   flex-direction: column;   /* stack logo, title, paragraph vertically */
-  align-items: center;      /* center all content horizontally */
-  gap: 20px;                /* spacing between logo, title, and text */
+  align-items: center;      /* center horizontally */
+  gap: 20px;                /* spacing between elements */
 }
 
 .logo-svg {
-  width: 250px;             /* adjust size if too big */
+  width: 250px;             
   height: auto;
-  display: block;            /* ensures image centers in flex */
-  margin: 0 auto;            /* extra safeguard */
+  display: block;            
+  margin: 0 auto;            
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -41,20 +39,7 @@ body {
   transform: scale(1.05);
 }
 
-
-.logo-svg:hover .arrow {
-  fill: #ffffffcc;
-}
-
 /* Downloads Section */
-.downloads {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
-}
 .section-title {
   text-align: center;
   font-size: 2.2rem;
@@ -64,6 +49,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+
+.downloads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  justify-items: center; /* ensures cards are centered in grid */
 }
 
 /* Cards */

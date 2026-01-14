@@ -15,10 +15,26 @@ body {
   animation: fadeDown 1s ease;
 }
 
-.logo {
-  width: 1000px;
+.logo-svg {
+  width: 350px; /* adjust to fit header */
   height: auto;
-  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Glow effect on hover */
+.logo-svg:hover .icon-circle {
+  filter: drop-shadow(0 0 10px #38bdf8);
+}
+
+/* Slight scale on hover */
+.logo-svg:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: subtle arrow color change on hover */
+.logo-svg:hover .arrow {
+  fill: #ffffffcc;
 }
 
 .downloads {

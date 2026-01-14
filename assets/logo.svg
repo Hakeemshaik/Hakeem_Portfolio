@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="80" viewBox="0 0 250 80">
+  <!-- Circle icon -->
+  <circle cx="40" cy="40" r="35" fill="#38bdf8" stroke="#ffffff" stroke-width="3"></circle>
+
+  <!-- H in icon -->
+  <text x="40" y="48" text-anchor="middle" fill="white" font-size="40" font-family="Segoe UI, sans-serif" font-weight="bold" dominant-baseline="middle">
+    H
+  </text>
+
+  <!-- Download arrow in icon -->
+  <polygon points="35,55 45,55 40,65" fill="white">
+    <animate attributeName="points" values="35,55 45,55 40,65; 35,57 45,57 40,67; 35,55 45,55 40,65" dur="1.5s" repeatCount="indefinite"></animate>
+  </polygon>
+
+  <!-- Text next to icon -->
+  <text x="90" y="50" fill="white" font-size="32" font-family="Segoe UI, sans-serif" font-weight="bold" dominant-baseline="middle">
+    Hakeem Resources
+  </text>
+</svg>

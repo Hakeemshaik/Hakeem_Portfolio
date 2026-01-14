@@ -16,27 +16,23 @@ body {
 }
 
 .logo-svg {
-  width: 350px; /* adjust to fit header */
+  width: 400px; /* adjusts to fit header nicely */
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-/* Glow effect on hover */
 .logo-svg:hover .icon-circle {
   filter: drop-shadow(0 0 10px #38bdf8);
 }
 
-/* Slight scale on hover */
 .logo-svg:hover {
   transform: scale(1.05);
 }
 
-/* Optional: subtle arrow color change on hover */
 .logo-svg:hover .arrow {
   fill: #ffffffcc;
 }
-
 .downloads {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

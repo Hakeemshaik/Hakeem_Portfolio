@@ -1,30 +1,47 @@
 /* ===================== GLOBAL ===================== */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: white;
+  overflow-x: hidden;
 }
 
 /* ===================== HERO ===================== */
 .hero {
   display: flex;
-  justify-content: center;   /* center content horizontally */
-  text-align: center;        /* center text inside */
+  justify-content: center;
+  text-align: center;
   padding: 80px 20px;
-  background: radial-gradient(circle at top, #1e293b, #020617);
-  animation: fadeDown 1.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(56,189,248,0.15);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite alternate;
+  z-index: 0;
 }
 
 .hero-content {
   display: flex;
-  flex-direction: column;   /* stack logo, title, paragraph vertically */
-  align-items: center;      /* center horizontally */
-  gap: 20px;                /* spacing between elements */
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .logo-svg {
@@ -32,20 +49,19 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .logo-svg:hover {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(-5deg);
+  filter: drop-shadow(0 0 20px #38bdf8);
 }
 
 /* ===================== SECTION TITLE ===================== */
 .section-title {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin: 50px 0 30px 0;
-  color: #38bdf8;
   background: linear-gradient(90deg, #38bdf8, #0ea5e9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -55,57 +71,58 @@ body {
 /* ===================== DOWNLOADS GRID ===================== */
 .downloads {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 20px;
-  justify-items: center; /* centers cards in grid */
+  justify-items: center;
 }
 
 /* ===================== CARDS ===================== */
 .card {
-  background: rgba(255,255,255,0.05);
+  background: linear-gradient(135deg, rgba(56,189,248,0.1), rgba(14,165,233,0.1));
   border-radius: 20px;
   padding: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 420px;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  min-height: 400px; /* consistent height */
 }
 
 .card:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-  background: rgba(56, 189, 248, 0.12);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  background: linear-gradient(135deg, rgba(56,189,248,0.3), rgba(14,165,233,0.3));
 }
 
 .card img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
   margin-bottom: 20px;
   object-fit: cover;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(56,189,248,0.4);
 }
 
 .card h3 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin: 10px 0;
   color: #38bdf8;
 }
 
 .card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
   line-height: 1.5;
   max-width: 90%;
+  color: #e0f2fe;
 }
 
 /* ===================== DOWNLOAD BUTTON ===================== */
@@ -114,36 +131,33 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 12px 25px;
+  padding: 14px 28px;
   background: linear-gradient(90deg, #38bdf8, #0ea5e9);
   color: #020617;
   font-weight: bold;
-  border-radius: 12px;
+  border-radius: 15px;
   text-decoration: none;
   font-size: 1rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
 }
 
 .download-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
 .download-btn .icon {
-  font-size: 1.2rem;
-}
-
-/* ===================== FOOTER ===================== */
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  opacity: 0.7;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 1.3rem;
 }
 
 /* ===================== ANIMATIONS ===================== */
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(20px) translateX(10px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
@@ -152,4 +166,13 @@ footer {
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-40px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }

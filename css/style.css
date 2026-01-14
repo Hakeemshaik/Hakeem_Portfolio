@@ -16,7 +16,7 @@ body {
 }
 
 .logo-svg {
-  width: 400px; /* adjusts to fit header nicely */
+  width: 450px; /* adjust size for header */
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -33,6 +33,7 @@ body {
 .logo-svg:hover .arrow {
   fill: #ffffffcc;
 }
+
 .downloads {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

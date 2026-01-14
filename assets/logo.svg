@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="logo-svg" viewBox="0 0 600 100">
+<svg xmlns="http://www.w3.org/2000/svg" class="logo-svg" viewBox="0 0 650 100">
   <!-- Circle icon -->
   <circle class="icon-circle" cx="50" cy="50" r="45" fill="#38bdf8" stroke="#ffffff" stroke-width="3"></circle>
 
@@ -12,8 +12,8 @@
     <animate attributeName="points" values="45,70 55,70 50,80; 45,72 55,72 50,82; 45,70 55,70 50,80" dur="1.5s" repeatCount="indefinite"></animate>
   </polygon>
 
-  <!-- Full text next to icon -->
+  <!-- Text next to icon -->
   <text x="120" y="60" fill="white" font-size="36" font-family="Segoe UI, sans-serif" font-weight="bold" dominant-baseline="middle">
-    Hakeem Resources
+    Hakeem's Portfolio
   </text>
 </svg>

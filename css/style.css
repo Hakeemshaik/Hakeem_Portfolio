@@ -11,8 +11,8 @@ body {
 
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  animation: fadeDown 1s ease;
+  padding: 40px 20px;
+  animation: fadeDown 3s ease;
 }
 
 .logo-svg {

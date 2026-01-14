@@ -12,23 +12,23 @@ body {
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: center;   /* center content horizontally */
-  text-align: center;        /* center text inside */
+  justify-content: center;  
+  text-align: center;       
   padding: 80px 20px;
 }
 
 .hero-content {
   display: flex;
-  flex-direction: column;    /* stack logo, title, paragraph */
-  align-items: center;       /* center horizontally */
-  gap: 20px;                 /* spacing between logo, title, paragraph */
+  flex-direction: column;   
+  align-items: center;      
+  gap: 20px;                
 }
 
 .logo-svg {
   width: 250px;
   height: auto;
   display: block;
-  margin: 0 auto;            /* ensure image centers */
+  margin: 0 auto;            
 }
 
 /* Section Title */
@@ -53,9 +53,62 @@ body {
   padding: 20px;
 }
 
+/* Card */
 .card {
   background: rgba(255,255,255,0.08);
   border-radius: 20px;
   padding: 25px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #38bdf8;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.download-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+
